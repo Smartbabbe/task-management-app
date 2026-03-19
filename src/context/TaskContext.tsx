@@ -28,7 +28,7 @@ export function TaskProvider({ children }: { children: ReactNode }) {
   const [view, setView] = useState<'kanban' | 'list'>('kanban')
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem('taskly-dark')
-    return saved ? JSON.parse(saved) : false
+    return saved ? JSON.parse(saved) : true
   })
 
   useEffect(() => {
